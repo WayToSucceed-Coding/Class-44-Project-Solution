@@ -6,8 +6,8 @@ st.title("📝 Quick Voice Note")
 
 if st.button("🎤 Record Note"):
     recognizer = sr.Recognizer()
-    with sr.Microphone() as mic:
-        with st.spinner("🎤 Listening... Please speak clearly"):
+    with st.spinner("🎤 Listening... Please speak clearly"):
+       with sr.Microphone() as mic:
             try:
                 audio = recognizer.listen(mic, timeout=5)
                 note = recognizer.recognize_google(audio)
